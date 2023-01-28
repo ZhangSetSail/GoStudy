@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dapr1
+  labels:
+    app: dapr
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dapr
+  template:
+    metadata:
+      labels:
+        app: dapr
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "dapr1"
+    spec:
+      containers:
+        - name: dapr
+          image: dapr:test
