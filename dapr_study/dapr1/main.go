@@ -18,12 +18,12 @@ func main() {
 	store := "statestore" // defined in the component YAML
 
 	// save state with the key key1, default options: strong, last-write
-	if err := client.SaveState(ctx, store, "key2", data, nil); err != nil {
+	if err := client.SaveState(ctx, store, "key1", data, nil); err != nil {
 		panic(err)
 	}
 
 	// get state for key key1
-	item, err := client.GetState(ctx, store, "key2", nil)
+	item, err := client.GetState(ctx, store, "key1", nil)
 	if err != nil {
 		panic(err)
 	}
