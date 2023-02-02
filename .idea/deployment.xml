@@ -5,7 +5,7 @@
       <paths name="test">
         <serverdata>
           <mappings>
-            <mapping deploy="/root/azhang/GoStudy" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/root/zqh/dapr/GoStudy" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
