@@ -9,8 +9,8 @@ import (
 	"os"
 	"os/signal"
 	"path/filepath"
+	"sync"
 	"syscall"
-	"time"
 )
 
 func main() {
@@ -24,7 +24,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	factory := informers.NewSharedInformerFactoryWithOptions(clientSet, 0, informers.WithNamespace("default"))
+	factory := informers.NewSharedInformerFactoryWithOptions(clientSet, 0, informers.WithNamespace(""))
 	informer := factory.Core().V1().Pods().Informer()
 	informer.AddEventHandler(NewEventHandler())
 
@@ -34,18 +34,15 @@ func main() {
 
 	sigs := make(chan os.Signal, 1)
 	signal.Notify(sigs, syscall.SIGINT, syscall.SIGTERM)
-	go test(sigs)
+	defer close(sigs)
 	<-sigs
 	stopper <- struct{}{}
 	close(stopper)
 	log.Println("watch pod stopped...")
 }
-func test(sigs chan<- os.Signal) {
-	time.Sleep(10 * time.Second)
-	close(sigs)
-}
 
 type EventHandler struct {
+	podList sync.Map
 }
 
 func NewEventHandler() *EventHandler {
