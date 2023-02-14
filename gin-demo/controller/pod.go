@@ -10,6 +10,9 @@ type PodsManage struct {
 }
 
 func (p *PodsManage) GetPod(c *gin.Context) {
+}
+
+func (p *PodsManage) GetPodsName(c *gin.Context) {
 	namespace := c.Query("namespace")
 	pm := handle.GetManagerPod()
 	podList, err := pm.GetPodByNamespace(namespace)
@@ -23,10 +26,6 @@ func (p *PodsManage) GetPod(c *gin.Context) {
 		"code": http.StatusOK,
 		"data": podList,
 	})
-}
-
-func (p *PodsManage) GetPods(c *gin.Context) {
-
 }
 
 func (p *PodsManage) DeletePod(c *gin.Context) {

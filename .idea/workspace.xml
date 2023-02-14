@@ -5,108 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1edaed87-1f8e-4929-b5c0-0d1df776a573" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/gin-demo/api/api_interface.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-demo/controller/client_go_router.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-demo/controller/pod.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-demo/handle/handle.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-demo/handle/pod.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-demo/handle/watch/actualize.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-demo/handle/watch/app.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-demo/handle/watch/watch.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-demo/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-demo/model/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-demo/router/initrouter.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-demo/router/pod.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-demo/server/client-go.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-demo/server/server.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/.golangci.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/alt_exit.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/appveyor.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/buffer_pool.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/doc.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/entry.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/exported.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/formatter.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/hooks.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/json_formatter.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/logger.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/logrus.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/terminal_check_appengine.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/terminal_check_bsd.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/terminal_check_js.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/terminal_check_no_terminal.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/terminal_check_notappengine.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/terminal_check_solaris.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/terminal_check_unix.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/terminal_check_windows.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/text_formatter.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/writer.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/balancer/conn_state_evaluator.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/deepcopy.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/doc.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/helpers.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/register.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/types.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/types_jsonschema.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1/.import-restrictions" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1/conversion.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1/deepcopy.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1/defaults.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1/doc.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1/generated.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1/generated.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1/marshal.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1/register.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1/types.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1/types_jsonschema.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1/zz_generated.conversion.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1/zz_generated.deepcopy.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1/zz_generated.defaults.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/zz_generated.deepcopy.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/client/listers/apiextensions/v1/customresourcedefinition.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apiextensions-apiserver/pkg/client/listers/apiextensions/v1/expansion_generated.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/apimachinery/pkg/api/equality/semantic.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/utils/pointer/OWNERS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/utils/pointer/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/k8s.io/utils/pointer/pointer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-go_watch/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/client-go-watch/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-go_watch/test_one/t1.go" beforeDir="false" afterPath="$PROJECT_DIR$/client-go-watch/test_one/t1.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/crypto/AUTHORS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/crypto/CONTRIBUTORS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/crypto/sha3/doc.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/crypto/sha3/doc.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/crypto/sha3/sha3.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/crypto/sha3/sha3.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/crypto/sha3/sha3_s390x.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/crypto/sha3/sha3_s390x.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/balancer/balancer.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/balancer/balancer.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/balancer/base/balancer.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/balancer/base/balancer.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/clientconn.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/clientconn.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/dialoptions.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/dialoptions.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/balancer/gracefulswitch/gracefulswitch.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/balancer/gracefulswitch/gracefulswitch.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/binarylog/binarylog.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/binarylog/binarylog.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/envconfig/xds.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/envconfig/xds.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/grpcutil/method.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/grpcutil/method.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/internal.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/internal.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/transport/handler_server.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/transport/handler_server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/transport/http2_client.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/transport/http2_client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/transport/http2_server.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/transport/http2_server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/transport/http_util.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/transport/http_util.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/transport/transport.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/transport/transport.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/regenerate.sh" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/regenerate.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/resolver/map.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/resolver/map.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/service_config.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/service_config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/stream.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/stream.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/version.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/version.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/vet.sh" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/vet.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/modules.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/modules.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin-demo/api/api_interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-demo/api/api_interface.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin-demo/controller/pod.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-demo/controller/pod.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin-demo/handle/watch/actualize.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-demo/handle/watch/actualize.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin-demo/handle/watch/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-demo/handle/watch/app.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin-demo/model/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-demo/model/model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin-demo/router/pod.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-demo/router/pod.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin-demo/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-demo/server/server.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

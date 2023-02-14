@@ -13,7 +13,9 @@ func Run() error {
 	logrus.SetFormatter(&logrus.JSONFormatter{})
 	//初始化k8s客户端
 	clientSet := InitK8SClient()
+	//初始化 client-go 相关路由
 	controller.CreateClientSetManage()
+	//初始化实现操错
 	handle.InitHandle(clientSet)
 	return router.InitRouter()
 }

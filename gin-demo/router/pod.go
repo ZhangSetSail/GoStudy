@@ -6,7 +6,9 @@ import (
 )
 
 func PodRouter(p *gin.Engine) {
+	podGroup := p.Group("/pod")
+	podGroup.GET("/status", controller.GetClientSetManage().GetPod)
+
 	podsGroup := p.Group("/pods")
-	podsGroup.GET("/get", controller.GetClientSetManage().GetPod)
-	podsGroup.GET("/list", controller.GetClientSetManage().GetPods)
+	podsGroup.GET("/name", controller.GetClientSetManage().GetPodsName)
 }
