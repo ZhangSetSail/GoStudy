@@ -5,14 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1edaed87-1f8e-4929-b5c0-0d1df776a573" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/gin-demo/controller/watch-pod.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gin-demo/handle/client-go/client-go.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gin-demo/handle/client-go/pod.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gin-demo/handle/client-go/watch-pod.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gin-demo/router/client-go/router.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gin-demo/router/client-go/watch/router.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gin-demo/router/client-go/watch/watch-pod.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gin-demo/api/api_interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-demo/api/api_interface.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin-demo/controller/client_go_router.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-demo/controller/client_go_router.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gin-demo/controller/pod.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-demo/controller/pod.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin-demo/handle/watch/actualize.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-demo/handle/watch/actualize.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin-demo/handle/watch/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-demo/handle/watch/app.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin-demo/model/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-demo/model/model.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin-demo/router/pod.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-demo/router/pod.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin-demo/handle/handle.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-demo/handle/handle.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin-demo/handle/pod.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin-demo/handle/watch/actualize.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-demo/handle/client-go/watch/actualize.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin-demo/handle/watch/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-demo/handle/client-go/watch/app.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin-demo/handle/watch/watch.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-demo/handle/client-go/watch/watch.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin-demo/router/initrouter.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-demo/router/initrouter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin-demo/router/pod.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-demo/router/client-go/pod.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gin-demo/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-demo/server/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readFile/read.go" beforeDir="false" afterPath="$PROJECT_DIR$/readFile/read.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,11 +86,11 @@
       <recent name="$PROJECT_DIR$/dapr_study/dapr2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/gin-demo/handle/watch" />
+      <recent name="$PROJECT_DIR$/gin-demo/handle/client-go" />
+      <recent name="$PROJECT_DIR$/gin-demo/server" />
       <recent name="$PROJECT_DIR$/gin-demo/handle" />
-      <recent name="$PROJECT_DIR$/gin-demo/router" />
-      <recent name="$PROJECT_DIR$/gin-demo" />
-      <recent name="$PROJECT_DIR$/client-go-watch/server" />
+      <recent name="$PROJECT_DIR$/gin-demo/router/client-go" />
+      <recent name="$PROJECT_DIR$/gin-demo/router/client-go/watch" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />

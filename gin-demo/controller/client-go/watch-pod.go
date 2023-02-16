@@ -1,4 +1,4 @@
-package controller
+package client_go
 
 import (
 	"github.com/ZhangSetSail/GoStudy/gin-demo/handle"
@@ -6,16 +6,12 @@ import (
 	"net/http"
 )
 
-type PodsManage struct {
+type WatchPodManage struct {
 }
 
-func (p *PodsManage) GetPod(c *gin.Context) {
-}
-
-func (p *PodsManage) GetPodsName(c *gin.Context) {
+func (w WatchPodManage) GetWatchPodsName(c *gin.Context) {
 	namespace := c.Query("namespace")
-	pm := handle.GetManagerPod()
-	podList, err := pm.GetPodByNamespace(namespace)
+	podList, err := handle.GetManagerClientGo().GetWatchPodByNamespace(namespace)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.Error{
 			Err:  err,
@@ -26,8 +22,4 @@ func (p *PodsManage) GetPodsName(c *gin.Context) {
 		"code": http.StatusOK,
 		"data": podList,
 	})
-}
-
-func (p *PodsManage) DeletePod(c *gin.Context) {
-
 }

@@ -2,18 +2,20 @@ package handle
 
 import (
 	"context"
-	"github.com/ZhangSetSail/GoStudy/gin-demo/handle/watch"
+	"github.com/ZhangSetSail/GoStudy/gin-demo/handle/client-go"
+	"github.com/ZhangSetSail/GoStudy/gin-demo/handle/client-go/watch"
 	"k8s.io/client-go/kubernetes"
 )
 
 func InitHandle(clientSet *kubernetes.Clientset) {
+	//初始化k8s客户端
 	mw := watch.CreateResourceWatch(clientSet)
 	mw.Start()
-	defaultManagerPod = CreatePodManager(clientSet, context.Background())
+	defaultManagerClientGo = client_go.CreateClientGoManager(mw, clientSet, context.Background())
 }
 
-var defaultManagerPod *ManagerPod
+var defaultManagerClientGo *client_go.ManagerClientGo
 
-func GetManagerPod() *ManagerPod {
-	return defaultManagerPod
+func GetManagerClientGo() *client_go.ManagerClientGo {
+	return defaultManagerClientGo
 }

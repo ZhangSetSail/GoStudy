@@ -1,17 +1,10 @@
 package main
 
-import (
-	"fmt"
-	"log"
-	"os"
-	"strings"
-)
+import "fmt"
 
 func main() {
-	content, err := os.ReadFile("文件.txt")
-	if err != nil {
-		log.Fatal(err)
+	var test []*string
+	for i, v := range test {
+		fmt.Println(i, v)
 	}
-	list := strings.Split(string(content), "\n")
-	fmt.Println(list[1])
 }
