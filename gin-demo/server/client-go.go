@@ -3,13 +3,14 @@ package server
 import (
 	"github.com/sirupsen/logrus"
 	"k8s.io/client-go/kubernetes"
+	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
 	"log"
 	"os"
 	"path/filepath"
 )
 
-func InitK8SClient() *kubernetes.Clientset {
+func InitK8SClient() (*kubernetes.Clientset, *rest.Config) {
 	logrus.Infof("begin init k8s client")
 	config, err := clientcmd.BuildConfigFromFlags("", filepath.Join(os.Getenv("HOME"), ".kube", "config"))
 	if err != nil {
@@ -20,5 +21,5 @@ func InitK8SClient() *kubernetes.Clientset {
 	if err != nil {
 		log.Fatal(err)
 	}
-	return clientSet
+	return clientSet, config
 }

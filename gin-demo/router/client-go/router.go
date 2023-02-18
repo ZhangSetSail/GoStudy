@@ -1,12 +1,11 @@
 package client_go
 
 import (
-	"github.com/ZhangSetSail/GoStudy/gin-demo/router/client-go/watch"
+	client_go "github.com/ZhangSetSail/GoStudy/gin-demo/controller/client-go"
 	"github.com/gin-gonic/gin"
 )
 
 func Router(r *gin.RouterGroup) {
-	PodRouter(r.Group("/pod"))
-	PodsRouter(r.Group("/pods"))
-	watch.WatchRouter(r.Group("/watch"))
+	r.GET("/:kind/name-list", client_go.GetClientSetManage().GetResourcesName)
+	WatchRouter(r.Group("/watch"))
 }

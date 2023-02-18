@@ -4,8 +4,8 @@ import "github.com/ZhangSetSail/GoStudy/gin-demo/api"
 
 //ClientManageInterface 汇总所有 client-go 的相关的路由的接口
 type ClientManageInterface interface {
-	api.PodInterface
-	api.WatchPodInterface
+	api.ResourceInterface
+	api.WatchResourceInterface
 }
 
 func GetClientSetManage() ClientManageInterface {
@@ -21,6 +21,6 @@ var defaultClientManager ClientManageInterface
 
 //ClientGoStruct 汇总所有 client-go 的相关的路由的结构体
 type ClientGoStruct struct {
-	PodsManage
-	WatchPodManage
+	ResourceManage
+	WatchResourceManage
 }
