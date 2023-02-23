@@ -39,8 +39,8 @@ func (m *ManagerClientGo) GetResourcesNameByNamespace(kind, namespace string) (*
 		fmt.Println()
 	}
 	return &model.ResourceNamesResponse{
-		names,
-		namespace,
-		kind,
+		Names:     names,
+		Namespace: namespace,
+		Kind:      kind,
 	}, nil
 }
