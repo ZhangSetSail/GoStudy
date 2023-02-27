@@ -1,10 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
-	var test []*string
-	for i, v := range test {
-		fmt.Println(i, v)
-	}
+	a := "abc-def-hagh-jsk"
+	fmt.Println(strings.SplitN(a, "-", 0))
+	fmt.Println(strings.SplitAfterN(a, "-", 0))
 }

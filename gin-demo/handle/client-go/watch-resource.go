@@ -1,8 +1,6 @@
 package client_go
 
-import (
-	"github.com/sirupsen/logrus"
-)
+import "github.com/sirupsen/logrus"
 
 func (m *ManagerClientGo) GetWatchResourcesByNamespace(kind, namespace string) ([]string, error) {
 	logrus.Infof("get watch pod namespace by %v", namespace)

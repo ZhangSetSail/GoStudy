@@ -11,6 +11,7 @@ type ManagerWatch interface {
 	OnAdd(obj interface{})
 	OnDelete(obj interface{})
 	GetApp(kind string) *App
+	GetLister() *Lister
 	OnUpdate(oldObj interface{}, newObj interface{})
 	Ready() bool
 }
@@ -38,6 +39,10 @@ func (mw *managerWatch) getApp(namespace string) *App {
 		mw.app.Store(namespace, app)
 	}
 	return app
+}
+
+func (mw *managerWatch) GetLister() *Lister {
+	return mw.listers
 }
 
 func (mw *managerWatch) GetApp(namespace string) *App {
