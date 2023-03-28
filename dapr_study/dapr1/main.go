@@ -12,15 +12,16 @@ type DaprTest struct {
 	client dapr.Client
 	ctx    context.Context
 	store  string
+	pubsub string
 }
 
-//KeyValue 解析请求数据所用到的结构体
+// KeyValue 解析请求数据所用到的结构体
 type KeyValue struct {
 	Key   string `form:"key"`
 	Value string `form:"value"`
 }
 
-//Add 添加
+// Add 添加
 func (d DaprTest) Add(c *gin.Context) {
 	var kv KeyValue
 	if err := c.ShouldBindQuery(&kv); err != nil {
@@ -33,7 +34,7 @@ func (d DaprTest) Add(c *gin.Context) {
 	c.String(http.StatusOK, "Successfully added")
 }
 
-//Get 获取
+// Get 获取
 func (d DaprTest) Get(c *gin.Context) {
 	var kv KeyValue
 	if err := c.ShouldBindQuery(&kv); err != nil {
@@ -47,7 +48,7 @@ func (d DaprTest) Get(c *gin.Context) {
 	c.String(http.StatusOK, ret)
 }
 
-//Delete 删除
+// Delete 删除
 func (d DaprTest) Delete(c *gin.Context) {
 	var kv KeyValue
 	if err := c.ShouldBindQuery(&kv); err != nil {
@@ -59,7 +60,12 @@ func (d DaprTest) Delete(c *gin.Context) {
 	c.String(http.StatusOK, "Successfully delete")
 }
 
-//initDapr 初始化 Dapr
+func (d DaprTest) A(c *gin.Context) {
+	fmt.Println(c.Request.Body)
+	c.String(http.StatusOK, "Successfully A")
+}
+
+// initDapr 初始化 Dapr
 func initDapr() DaprTest {
 	var err error
 	var daprCli DaprTest
@@ -68,6 +74,7 @@ func initDapr() DaprTest {
 	daprCli.ctx = context.Background()
 	//所用到的存储名称，也就是我们上面添加的redis.yaml中的name字段
 	daprCli.store = "statestore"
+	daprCli.pubsub = "pubsub"
 	if err != nil {
 		panic(err)
 	}
@@ -81,5 +88,6 @@ func main() {
 	r.POST("/add", daprCli.Add)
 	r.GET("/get", daprCli.Get)
 	r.DELETE("/delete", daprCli.Delete)
+	r.POST("/A", daprCli.A)
 	r.Run()
 }

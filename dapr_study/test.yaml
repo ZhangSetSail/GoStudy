@@ -4,7 +4,6 @@ metadata:
   name: deprdemo
   labels:
     app: deprdemo
-    name: deprdemo
 spec:
   replicas: 1
   selector:
@@ -21,20 +20,6 @@ spec:
     spec:
       containers:
         - name: deprdemoport
-          image: dapr:test
+          image: registry.cn-hangzhou.aliyuncs.com/zhangqihang/dapr:test
           ports:
             - containerPort: 8080
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: deprdemo-svc
-spec:
-  type: NodePort
-  ports:
-    - port: 8080
-      targetPort: 8080
-      nodePort: 30521
-      protocol: TCP
-  selector:
-    name: deprdemo

@@ -4,7 +4,9 @@ import (
 	"fmt"
 	"github.com/ZhangSetSail/GoStudy/gin-demo/model"
 	"github.com/sirupsen/logrus"
-	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	v1 "k8s.io/client-go/applyconfigurations/meta/v1"
+	"sigs.k8s.io/gateway-api/apis/v1beta1"
 	"strings"
 )
 
@@ -43,4 +45,52 @@ func (m *ManagerClientGo) GetResourcesNameByNamespace(kind, namespace string) (*
 		Namespace: namespace,
 		Kind:      kind,
 	}, nil
+}
+
+func (m *ManagerClientGo) CreateGateway(namespace string) {
+	gateway := &v1beta1.Gateway{
+		ObjectMeta: metav1.ObjectMeta{
+			Name:      "example-gateway",
+			Namespace: "default",
+		},
+		Spec: v1beta1.GatewaySpec{
+			GatewayClassName: "test",
+			Listeners: []v1beta1.Listener{
+				{
+					Name:          "",
+					Hostname:      nil,
+					Port:          0,
+					Protocol:      "",
+					TLS:           nil,
+					AllowedRoutes: nil,
+				},
+			},
+			Addresses:
+		},
+	}
+	m.gatewayClient.Gateways(namespace).Create(m.ctx, gateway, metav1.CreateOptions{})
+}
+
+func  (m *ManagerClientGo) CreateHttpRoute(namespace string)  {
+	m.gatewayClient.GatewayClasses().Create(v1beta1.GatewayClass{
+		TypeMeta:   metav1.TypeMeta{},
+		ObjectMeta: metav1.ObjectMeta{},
+		Spec:       v1beta1.GatewayClassSpec{},
+		Status:     v1beta1.GatewayClassStatus{},
+	})
+	m.gatewayClient.HTTPRoutes(namespace).Create(m.ctx,&v1beta1.HTTPRoute{
+		TypeMeta:   metav1.TypeMeta{},
+		ObjectMeta: metav1.ObjectMeta{},
+		Spec:       v1beta1.HTTPRouteSpec{
+			CommonRouteSpec: v1beta1.CommonRouteSpec{
+				ParentRefs: []v1beta1.ParentReference{
+					{
+						Group:
+					},
+				},
+			},
+			Hostnames:       nil,
+			Rules:           nil,
+		},
+	}, metav1.CreateOptions{})
 }

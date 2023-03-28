@@ -7,5 +7,6 @@ import (
 
 func Router(r *gin.RouterGroup) {
 	r.GET("/:kind/name-list", client_go.GetClientSetManage().GetResourcesName)
+	r.POST("/gateway")
 	WatchRouter(r.Group("/watch"))
 }

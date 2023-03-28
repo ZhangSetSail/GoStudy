@@ -25,3 +25,7 @@ func (p *ResourceManage) GetResourcesName(c *gin.Context) {
 		})
 	}
 }
+
+func ()  {
+
+}

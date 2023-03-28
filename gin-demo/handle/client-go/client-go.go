@@ -8,15 +8,17 @@ import (
 )
 
 type ManagerClientGo struct {
-	clientSet *kubernetes.Clientset
-	ctx       context.Context
-	mw        watch.ManagerWatch
+	clientSet     *kubernetes.Clientset
+	ctx           context.Context
+	mw            watch.ManagerWatch
+	gatewayClient *gateway.GatewayV1beta1Client
 }
 
 func CreateClientGoManager(mw watch.ManagerWatch, clientSet *kubernetes.Clientset, gatewayClient *gateway.GatewayV1beta1Client, ctx context.Context) *ManagerClientGo {
 	return &ManagerClientGo{
-		clientSet: clientSet,
-		ctx:       ctx,
-		mw:        mw,
+		clientSet:     clientSet,
+		ctx:           ctx,
+		mw:            mw,
+		gatewayClient: gatewayClient,
 	}
 }
