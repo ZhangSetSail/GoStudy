@@ -5,7 +5,6 @@ import (
 	"fmt"
 	dapr "github.com/dapr/go-sdk/client"
 	"github.com/gin-gonic/gin"
-	"io/ioutil"
 	"net/http"
 )
 
@@ -62,8 +61,13 @@ func (d DaprTest) Delete(c *gin.Context) {
 }
 
 func (d DaprTest) A(c *gin.Context) {
-	body, _ := ioutil.ReadAll(c.Request.Body)
-	fmt.Println(string(body))
+	var message string
+	err := c.ShouldBindQuery(&message)
+	if err != nil {
+		fmt.Println(err)
+		c.String(http.StatusOK, "Successfully A")
+	}
+	fmt.Println(message)
 	c.String(http.StatusOK, "Successfully A")
 }
 
