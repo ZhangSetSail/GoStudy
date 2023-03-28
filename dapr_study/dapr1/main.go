@@ -66,11 +66,14 @@ func (d DaprTest) A(c *gin.Context) {
 }
 
 func (d DaprTest) Subscribe(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{
-		"pubsubname": "pubsub",
-		"topic":      "A",
-		"route":      "A",
-	})
+	c.JSON(http.StatusOK, []map[string]string{
+		{
+			"pubsubname": "pubsub",
+			"topic":      "A",
+			"route":      "A",
+		},
+	},
+	)
 }
 
 // initDapr 初始化 Dapr
