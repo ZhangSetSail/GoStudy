@@ -61,12 +61,7 @@ func (d DaprTest) Delete(c *gin.Context) {
 }
 
 func (d DaprTest) A(c *gin.Context) {
-	var message string
-	err := c.ShouldBindQuery(&message)
-	if err != nil {
-		fmt.Println(err)
-		c.String(http.StatusOK, "Successfully A")
-	}
+	message := c.PostForm("data")
 	fmt.Println(message)
 	c.String(http.StatusOK, "Successfully A")
 }
