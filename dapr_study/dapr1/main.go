@@ -61,9 +61,8 @@ func (d DaprTest) Delete(c *gin.Context) {
 }
 
 func (d DaprTest) A(c *gin.Context) {
-	message := c.PostForm("message")
-	message1 := c.Param("message")
-	fmt.Println(message, message1)
+	message := c.PostForm("data.message")
+	fmt.Println("A: ", message)
 	c.String(http.StatusOK, "Successfully A")
 }
 
