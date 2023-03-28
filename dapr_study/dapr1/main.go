@@ -65,6 +65,14 @@ func (d DaprTest) A(c *gin.Context) {
 	c.String(http.StatusOK, "Successfully A")
 }
 
+func (d DaprTest) Subscribe(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{
+		"pubsubname": "pubsub",
+		"topic":      "A",
+		"route":      "A",
+	})
+}
+
 // initDapr 初始化 Dapr
 func initDapr() DaprTest {
 	var err error
@@ -89,5 +97,6 @@ func main() {
 	r.GET("/get", daprCli.Get)
 	r.DELETE("/delete", daprCli.Delete)
 	r.POST("/A", daprCli.A)
+	r.GET("/dapr/subscribe", daprCli.Subscribe)
 	r.Run()
 }
