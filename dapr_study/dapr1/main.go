@@ -61,6 +61,8 @@ func (d DaprTest) Delete(c *gin.Context) {
 	c.String(http.StatusOK, "Successfully delete")
 }
 
+type
+
 func (d DaprTest) A(c *gin.Context) {
 	buf := new(bytes.Buffer)
 	buf.ReadFrom(c.Request.Body)
