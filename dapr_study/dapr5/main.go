@@ -54,7 +54,7 @@ func Subscribe(c *gin.Context) {
 func main() {
 	r := gin.Default()
 	r.POST("/A", A)
-	r.POST("/C", A)
+	r.POST("/C", C)
 	r.GET("/dapr/subscribe", Subscribe)
 	r.Run()
 }
