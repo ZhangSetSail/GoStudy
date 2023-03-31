@@ -65,7 +65,7 @@ type Body struct {
 }
 
 func (d DaprTest) A(c *gin.Context) {
-	fmt.Println("A: ", c.Request)
+	fmt.Println("A: ", c.Request.Body)
 	c.String(http.StatusOK, "Successfully A")
 }
 
