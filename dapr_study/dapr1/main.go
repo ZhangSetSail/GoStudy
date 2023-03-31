@@ -1,11 +1,15 @@
 package main
 
 import (
+	"bytes"
 	"context"
+	"encoding/json"
 	"fmt"
 	dapr "github.com/dapr/go-sdk/client"
 	"github.com/gin-gonic/gin"
+	"io/ioutil"
 	"net/http"
+	"sync"
 )
 
 type DaprTest struct {
@@ -65,11 +69,12 @@ type Body struct {
 }
 
 func (d DaprTest) A(c *gin.Context) {
-	var body Body
-	if err := c.ShouldBindQuery(&body); err != nil {
+	xxx, err := RequestInputs(c)
+	if err != nil {
 		c.Error(err)
+		return
 	}
-	fmt.Println("A: ", body.Message)
+	fmt.Println("A: ", xxx)
 	c.String(http.StatusOK, "Successfully A")
 }
 
@@ -110,4 +115,79 @@ func main() {
 	r.POST("/A", daprCli.A)
 	r.GET("/dapr/subscribe", daprCli.Subscribe)
 	r.Run()
+}
+
+// RequestInputs 获取所有参数
+func RequestInputs(c *gin.Context) (map[string]interface{}, error) {
+
+	const defaultMemory = 32 << 20
+	contentType := c.ContentType()
+
+	var (
+		dataMap  = make(map[string]interface{})
+		queryMap = make(map[string]interface{})
+		postMap  = make(map[string]interface{})
+	)
+
+	// @see gin@v1.7.7/binding/query.go ==> func (queryBinding) Bind(req *http.Request, obj interface{})
+	for k := range c.Request.URL.Query() {
+		queryMap[k] = c.Query(k)
+	}
+
+	if "application/json" == contentType {
+		var bodyBytes []byte
+		if c.Request.Body != nil {
+			bodyBytes, _ = ioutil.ReadAll(c.Request.Body)
+		}
+		c.Request.Body = ioutil.NopCloser(bytes.NewBuffer(bodyBytes))
+		// @see gin@v1.7.7/binding/json.go ==> func (jsonBinding) Bind(req *http.Request, obj interface{})
+		if c.Request != nil && c.Request.Body != nil {
+			if err := json.NewDecoder(c.Request.Body).Decode(&postMap); err != nil {
+				return nil, err
+			}
+		}
+		c.Request.Body = ioutil.NopCloser(bytes.NewBuffer(bodyBytes))
+	} else if "multipart/form-data" == contentType {
+		// @see gin@v1.7.7/binding/form.go ==> func (formMultipartBinding) Bind(req *http.Request, obj interface{})
+		if err := c.Request.ParseMultipartForm(defaultMemory); err != nil {
+			return nil, err
+		}
+		for k, v := range c.Request.PostForm {
+			if len(v) > 1 {
+				postMap[k] = v
+			} else if len(v) == 1 {
+				postMap[k] = v[0]
+			}
+		}
+	} else {
+		if err := c.Request.ParseForm(); err != nil {
+			return nil, err
+		}
+		if err := c.Request.ParseMultipartForm(defaultMemory); err != nil {
+			if err != http.ErrNotMultipart {
+				return nil, err
+			}
+		}
+		for k, v := range c.Request.PostForm {
+			if len(v) > 1 {
+				postMap[k] = v
+			} else if len(v) == 1 {
+				postMap[k] = v[0]
+			}
+		}
+	}
+
+	var mu sync.RWMutex
+	for k, v := range queryMap {
+		mu.Lock()
+		dataMap[k] = v
+		mu.Unlock()
+	}
+	for k, v := range postMap {
+		mu.Lock()
+		dataMap[k] = v
+		mu.Unlock()
+	}
+
+	return dataMap, nil
 }
