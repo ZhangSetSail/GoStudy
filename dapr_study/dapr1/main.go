@@ -60,12 +60,15 @@ func (d DaprTest) Delete(c *gin.Context) {
 	c.String(http.StatusOK, "Successfully delete")
 }
 
-type Body struct {
-	Message string `json:"message"`
-}
-
 func (d DaprTest) A(c *gin.Context) {
-	fmt.Println("A: ", c.Request.Body)
+	a := struct {
+		Message string `json:"message"`
+	}{}
+	if err := c.ShouldBindQuery(&a); err != nil {
+		c.Error(err)
+		return
+	}
+	fmt.Println(a.Message)
 	c.String(http.StatusOK, "Successfully A")
 }
 
