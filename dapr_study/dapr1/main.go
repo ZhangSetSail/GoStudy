@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"context"
 	"fmt"
 	dapr "github.com/dapr/go-sdk/client"
@@ -61,14 +62,10 @@ func (d DaprTest) Delete(c *gin.Context) {
 }
 
 func (d DaprTest) A(c *gin.Context) {
-	a := struct {
-		Message string `json:"message"`
-	}{}
-	if err := c.ShouldBindQuery(&a); err != nil {
-		c.Error(err)
-		return
-	}
-	fmt.Println(a.Message)
+	buf := new(bytes.Buffer)
+	buf.ReadFrom(c.Request.Body)
+	newStr := buf.String()
+	fmt.Printf("A:%v", newStr)
 	c.String(http.StatusOK, "Successfully A")
 }
 
