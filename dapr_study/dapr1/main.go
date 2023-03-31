@@ -60,9 +60,16 @@ func (d DaprTest) Delete(c *gin.Context) {
 	c.String(http.StatusOK, "Successfully delete")
 }
 
+type Body struct {
+	Message string `json:"message"`
+}
+
 func (d DaprTest) A(c *gin.Context) {
-	message := c.PostForm("data.message")
-	fmt.Println("A: ", message)
+	var body Body
+	if err := c.ShouldBindQuery(&body); err != nil {
+		c.Error(err)
+	}
+	fmt.Println("A: ", body.Message)
 	c.String(http.StatusOK, "Successfully A")
 }
 

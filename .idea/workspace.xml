@@ -5,7 +5,127 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1edaed87-1f8e-4929-b5c0-0d1df776a573" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/dapr_study/dapr5/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/components-contrib/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/components-contrib/health/pinger.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/components-contrib/internal/utils/utils.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/components-contrib/metadata/base.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/components-contrib/metadata/duration.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/components-contrib/metadata/utils.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/components-contrib/secretstores/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/components-contrib/secretstores/feature.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/components-contrib/secretstores/metadata.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/components-contrib/secretstores/requests.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/components-contrib/secretstores/responses.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/components-contrib/secretstores/secret_store.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/actor/api/reminder.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/actor/api/runtime.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/actor/api/timer.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/actor/error/error.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/actor/manager/container.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/actor/manager/manager.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/actor/runtime/actor_runtime.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/actor/state/actor_state_change.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/actor/state/state_async_provider.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/actor/state/state_change_metadata.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/actor/state/state_manager.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/service/http/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/service/http/binding.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/service/http/health_check.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/service/http/invoke.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/service/http/service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/service/http/topic.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/kit/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/dapr/kit/ptr/of.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/gorilla/mux/AUTHORS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/gorilla/mux/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/gorilla/mux/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/gorilla/mux/doc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/gorilla/mux/middleware.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/gorilla/mux/mux.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/gorilla/mux/regexp.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/gorilla/mux/route.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/gorilla/mux/test_helpers.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/mitchellh/mapstructure/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/mitchellh/mapstructure/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/mitchellh/mapstructure/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/mitchellh/mapstructure/decode_hooks.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/mitchellh/mapstructure/error.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/mitchellh/mapstructure/mapstructure.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/spf13/cast/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/spf13/cast/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/spf13/cast/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/spf13/cast/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/spf13/cast/cast.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/spf13/cast/caste.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/spf13/cast/timeformattype_string.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/envconfig/observability.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/grpcsync/oncefunc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/grpcutil/compressor.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dapr_study/dapr1/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/dapr_study/dapr1/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/service/grpc/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/service/grpc/binding.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/service/grpc/health_check.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/service/grpc/invoke.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/service/grpc/service.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/dapr/go-sdk/service/grpc/topic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/golang/protobuf/ptypes/empty/empty.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/crypto/sha3/keccakf.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/crypto/sha3/keccakf.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/genproto/googleapis/rpc/status/status.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/genproto/googleapis/rpc/status/status.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/attributes/attributes.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/attributes/attributes.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/backoff.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/backoff.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/balancer/balancer.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/balancer/balancer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/balancer/base/balancer.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/balancer/base/balancer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/balancer/conn_state_evaluator.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/balancer/conn_state_evaluator.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/balancer/roundrobin/roundrobin.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/balancer/roundrobin/roundrobin.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/balancer_conn_wrappers.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/balancer_conn_wrappers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/binarylog/grpc_binarylog_v1/binarylog.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/binarylog/grpc_binarylog_v1/binarylog.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/channelz/channelz.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/channelz/channelz.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/clientconn.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/clientconn.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/credentials/credentials.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/credentials/credentials.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/credentials/tls.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/credentials/tls.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/dialoptions.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/dialoptions.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/encoding/encoding.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/encoding/encoding.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/grpclog/loggerv2.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/grpclog/loggerv2.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/binarylog/binarylog.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/binarylog/binarylog.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/binarylog/env_config.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/binarylog/env_config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/binarylog/method_logger.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/binarylog/method_logger.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/channelz/types.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/channelz/types.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/envconfig/envconfig.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/envconfig/envconfig.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/envconfig/xds.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/envconfig/xds.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/grpclog/grpclog.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/grpclog/grpclog.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/grpcrand/grpcrand.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/grpcrand/grpcrand.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/grpcutil/method.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/grpcutil/method.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/internal.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/internal.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/resolver/dns/dns_resolver.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/resolver/dns/dns_resolver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/resolver/passthrough/passthrough.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/resolver/passthrough/passthrough.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/resolver/unix/unix.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/resolver/unix/unix.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/serviceconfig/serviceconfig.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/serviceconfig/serviceconfig.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/status/status.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/status/status.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/transport/controlbuf.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/transport/controlbuf.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/transport/handler_server.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/transport/handler_server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/transport/http2_client.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/transport/http2_client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/transport/http2_server.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/transport/http2_server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/transport/http_util.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/transport/http_util.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/transport/transport.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/internal/transport/transport.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/metadata/metadata.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/metadata/metadata.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/picker_wrapper.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/picker_wrapper.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/pickfirst.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/pickfirst.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/preloader.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/preloader.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/regenerate.sh" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/regenerate.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/resolver/resolver.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/resolver/resolver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/rpc_util.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/rpc_util.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/serviceconfig/serviceconfig.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/serviceconfig/serviceconfig.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/status/status.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/status/status.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/stream.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/stream.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/tap/tap.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/tap/tap.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/version.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/version.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/google.golang.org/grpc/vet.sh" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google.golang.org/grpc/vet.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/modules.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/modules.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

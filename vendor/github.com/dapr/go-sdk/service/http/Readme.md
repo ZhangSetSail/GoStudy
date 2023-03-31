@@ -1,40 +1,34 @@
-# Dapr gRPC Service SDK for Go
+# Dapr HTTP Service SDK for Go
 
-Start by importing Dapr Go `service/grpc` package:
+Start by importing Dapr Go `service/http` package:
 
 ```go
-daprd "github.com/dapr/go-sdk/service/grpc"
+daprd "github.com/dapr/go-sdk/service/http"
 ```
 
 ## Creating and Starting Service 
 
-To create a gRPC Dapr service, first, create a Dapr callback instance with a specific address:
+To create an HTTP Dapr service, first, create a Dapr callback instance with a specific address:
 
 ```go
-s, err := daprd.NewService(":50001")
-if err != nil {
-    log.Fatalf("failed to start the server: %v", err)
-}
+s := daprd.NewService(":8080")
 ```
 
-Or with address and an existing `net.Listener` in case you want to combine existing server listener:
+Or with address and an existing `http.ServeMux` in case you want to combine existing server implementations:
 
 ```go
-list, err := net.Listen("tcp", "localhost:0")
-if err != nil {
-	log.Fatalf("gRPC listener creation failed: %s", err)
-}
-s := daprd.NewServiceWithListener(list)
+mux := http.NewServeMux()
+mux.HandleFunc("/", myOtherHandler)
+s := daprd.NewServiceWithMux(":8080", mux)
 ```
 
 Once you create a service instance, you can "attach" to that service any number of event, binding, and service invocation logic handlers as shown below. Onces the logic is defined, you are ready to start the service:
 
 ```go
-if err := s.Start(); err != nil {
-    log.Fatalf("server error: %v", err)
+if err := s.Start(); err != nil && err != http.ErrServerClosed {
+	log.Fatalf("error: %v", err)
 }
 ```
-
 
 ## Event Handling 
 
@@ -42,11 +36,13 @@ To handle events from specific topic you need to add at least one topic event ha
 
 ```go
 sub := &common.Subscription{
-		PubsubName: "messages",
-		Topic:      "topic1",
-	}
-if err := s.AddTopicEventHandler(sub, eventHandler); err != nil {
-    log.Fatalf("error adding topic subscription: %v", err)
+	PubsubName: "messages",
+	Topic: "topic1",
+	Route: "/events",
+}
+err := s.AddTopicEventHandler(sub, eventHandler)
+if err != nil {
+	log.Fatalf("error adding topic subscription: %v", err)
 }
 ```
 
@@ -65,8 +61,8 @@ func eventHandler(ctx context.Context, e *common.TopicEvent) (retry bool, err er
 To handle service invocations you will need to add at least one service invocation handler before starting the service: 
 
 ```go
-if err := s.AddServiceInvocationHandler("echo", echoHandler); err != nil {
-    log.Fatalf("error adding invocation handler: %v", err)
+if err := s.AddServiceInvocationHandler("/echo", echoHandler); err != nil {
+	log.Fatalf("error adding invocation handler: %v", err)
 }
 ```
 
@@ -90,8 +86,8 @@ func echoHandler(ctx context.Context, in *common.InvocationEvent) (out *common.C
 To handle binding invocations you will need to add at least one binding invocation handler before starting the service: 
 
 ```go
-if err := s.AddBindingInvocationHandler("run", runHandler); err != nil {
-    log.Fatalf("error adding binding handler: %v", err)
+if err := s.AddBindingInvocationHandler("/run", runHandler); err != nil {
+	log.Fatalf("error adding binding handler: %v", err)
 }
 ```
 
@@ -107,10 +103,10 @@ func runHandler(ctx context.Context, in *common.BindingEvent) (out []byte, err e
 
 ## Templates 
 
-To accelerate your gRPC Dapr app development in Go even further you can use one of the GitHub templates integrating the gRPC Dapr callback package:
+To accelerate your HTTP Dapr app development in Go even further you can use one of the GitHub templates integrating the HTTP Dapr callback package:
 
-* [Dapr gRPC Service in Go](https://github.com/mchmarny/dapr-grpc-service-template) - Template project to jump start your Dapr event subscriber service with gRPC development
-* [Dapr gRPC Event Subscriber in Go](https://github.com/mchmarny/dapr-grpc-event-subscriber-template) - Template project to jump start your Dapr event subscriber service with gRPC development
+* [Dapr HTTP Event Subscriber in Go](https://github.com/mchmarny/dapr-http-event-subscriber-template) - Template project to jump start your Dapr event subscriber service with HTTP development
+* [Dapr HTTP cron Handler in Go](https://github.com/mchmarny/dapr-http-cron-handler-template) - Template project to jump start your Dapr service development for scheduled workloads
 
 
 ## Contributing to Dapr Go client
