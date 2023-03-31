@@ -22,8 +22,18 @@ func A(c *gin.Context) {
 		c.Error(err)
 		return
 	}
-	fmt.Println(b.Data.MessageType, ":", b.Data.Message)
+	fmt.Println("A:", b.Data.Message)
 	c.String(http.StatusOK, "Successfully A")
+}
+
+func C(c *gin.Context) {
+	var b Body
+	if err := c.ShouldBindBodyWith(&b, binding.JSON); err != nil {
+		c.Error(err)
+		return
+	}
+	fmt.Println("C:", b.Data.Message)
+	c.String(http.StatusOK, "Successfully C")
 }
 
 func Subscribe(c *gin.Context) {
@@ -32,6 +42,10 @@ func Subscribe(c *gin.Context) {
 			"pubsubname": "pubsub",
 			"topic":      "A",
 			"route":      "A",
+		}, {
+			"pubsubname": "pubsub",
+			"topic":      "C",
+			"route":      "C",
 		},
 	},
 	)
@@ -40,6 +54,7 @@ func Subscribe(c *gin.Context) {
 func main() {
 	r := gin.Default()
 	r.POST("/A", A)
+	r.POST("/C", A)
 	r.GET("/dapr/subscribe", Subscribe)
 	r.Run()
 }
