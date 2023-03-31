@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"github.com/gin-gonic/gin/binding"
 	"net/http"
 )
 
@@ -17,7 +18,7 @@ type Body struct {
 
 func A(c *gin.Context) {
 	var b Body
-	if err := c.ShouldBindQuery(&b); err != nil {
+	if err := c.ShouldBindBodyWith(&b, binding.JSON); err != nil {
 		c.Error(err)
 		return
 	}
