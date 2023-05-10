@@ -25,7 +25,7 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		fmt.Fprintln(w, string(body), r)
+		fmt.Fprintln(w, "第一个：", string(body), "第二个：", r)
 		return
 	}
 	fmt.Fprintln(w, r)
