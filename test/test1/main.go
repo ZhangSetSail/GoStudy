@@ -11,7 +11,6 @@ import (
 func sayHello(w http.ResponseWriter, r *http.Request) {
 	url := os.Getenv("URL")
 	if url != "" {
-		r.Body
 		resp, err := http.Get(url)
 		if err != nil {
 			logrus.Errorf("Failed to request: %v\n", err)
