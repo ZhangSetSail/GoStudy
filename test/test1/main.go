@@ -24,7 +24,7 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 			logrus.Errorf("Failed to read response body: %v\n", err)
 			return
 		}
-		fmt.Fprintln(w, "第一个：", string(body), "第二个：", r.Header)
+		fmt.Fprintln(w, "第一个：", string(body), "第二个：", r.Header["X-Request-Id"])
 		return
 	}
 	fmt.Fprintln(w, r)
