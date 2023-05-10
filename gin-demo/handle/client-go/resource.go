@@ -6,6 +6,7 @@ import (
 	"github.com/sirupsen/logrus"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	v1 "k8s.io/client-go/applyconfigurations/meta/v1"
+	"sigs.k8s.io/gateway-api/apis/v1alpha2"
 	"sigs.k8s.io/gateway-api/apis/v1beta1"
 	"strings"
 )
@@ -48,6 +49,30 @@ func (m *ManagerClientGo) GetResourcesNameByNamespace(kind, namespace string) (*
 }
 
 func (m *ManagerClientGo) CreateGateway(namespace string) {
+	v1alpha2.TCPRoute{}
+	v1alpha2.UDPRoute{}
+	v1alpha2.GRPCRoute{}
+	v1alpha2.TLSRoute{}
+
+	v1alpha2.HTTPRouteRule{}
+	v1beta1.HTTPRoute{
+		TypeMeta:   metav1.TypeMeta{},
+		ObjectMeta: metav1.ObjectMeta{},
+		Spec:       v1beta1.HTTPRouteSpec{},
+		Status:     v1beta1.HTTPRouteStatus{},
+	}
+	v1beta1.Gateway{
+		TypeMeta:   metav1.TypeMeta{},
+		ObjectMeta: metav1.ObjectMeta{},
+		Spec:       v1beta1.GatewaySpec{},
+		Status:     v1beta1.GatewayStatus{},
+	}
+	v1beta1.GatewayClass{
+		TypeMeta:   metav1.TypeMeta{},
+		ObjectMeta: metav1.ObjectMeta{},
+		Spec:       v1beta1.GatewayClassSpec{},
+		Status:     v1beta1.GatewayClassStatus{},
+	}
 	gateway := &v1beta1.Gateway{
 		ObjectMeta: metav1.ObjectMeta{
 			Name:      "example-gateway",
@@ -68,6 +93,7 @@ func (m *ManagerClientGo) CreateGateway(namespace string) {
 			Addresses:
 		},
 	}
+	m.gatewayClient.GatewayClasses().Create()
 	m.gatewayClient.Gateways(namespace).Create(m.ctx, gateway, metav1.CreateOptions{})
 }
 

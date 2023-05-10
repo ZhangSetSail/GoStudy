@@ -1,32 +1,13 @@
-# github.com/dapr/components-contrib v1.10.3
-## explicit; go 1.19
-github.com/dapr/components-contrib/health
-github.com/dapr/components-contrib/internal/utils
-github.com/dapr/components-contrib/metadata
-github.com/dapr/components-contrib/secretstores
-github.com/dapr/components-contrib/state
-github.com/dapr/components-contrib/state/query
 # github.com/dapr/go-sdk v1.6.0
 ## explicit; go 1.17
 github.com/dapr/go-sdk/actor
-github.com/dapr/go-sdk/actor/api
 github.com/dapr/go-sdk/actor/codec
 github.com/dapr/go-sdk/actor/codec/constant
 github.com/dapr/go-sdk/actor/codec/impl
 github.com/dapr/go-sdk/actor/config
-github.com/dapr/go-sdk/actor/error
-github.com/dapr/go-sdk/actor/manager
-github.com/dapr/go-sdk/actor/runtime
-github.com/dapr/go-sdk/actor/state
 github.com/dapr/go-sdk/client
 github.com/dapr/go-sdk/dapr/proto/common/v1
 github.com/dapr/go-sdk/dapr/proto/runtime/v1
-github.com/dapr/go-sdk/service/common
-github.com/dapr/go-sdk/service/http
-github.com/dapr/go-sdk/service/internal
-# github.com/dapr/kit v0.0.4
-## explicit; go 1.19
-github.com/dapr/kit/ptr
 # github.com/davecgh/go-spew v1.1.1
 ## explicit
 github.com/davecgh/go-spew/spew
@@ -89,7 +70,9 @@ github.com/golang/protobuf/proto
 github.com/golang/protobuf/ptypes
 github.com/golang/protobuf/ptypes/any
 github.com/golang/protobuf/ptypes/duration
+github.com/golang/protobuf/ptypes/struct
 github.com/golang/protobuf/ptypes/timestamp
+github.com/golang/protobuf/ptypes/wrappers
 # github.com/google/gnostic v0.6.9
 ## explicit; go 1.12
 github.com/google/gnostic/compiler
@@ -108,9 +91,6 @@ github.com/google/go-cmp/cmp/internal/value
 ## explicit; go 1.12
 github.com/google/gofuzz
 github.com/google/gofuzz/bytesource
-# github.com/gorilla/mux v1.8.0
-## explicit; go 1.12
-github.com/gorilla/mux
 # github.com/imdario/mergo v0.3.13
 ## explicit; go 1.13
 github.com/imdario/mergo
@@ -131,9 +111,6 @@ github.com/mailru/easyjson/jwriter
 # github.com/mattn/go-isatty v0.0.16
 ## explicit; go 1.15
 github.com/mattn/go-isatty
-# github.com/mitchellh/mapstructure v1.5.1-0.20220423185008-bf980b35cac4
-## explicit; go 1.14
-github.com/mitchellh/mapstructure
 # github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
 ## explicit
 github.com/modern-go/concurrent
@@ -147,6 +124,20 @@ github.com/munnerz/goautoneg
 ## explicit; go 1.18
 # github.com/onsi/gomega v1.24.1
 ## explicit; go 1.18
+# github.com/openkruise/kruise-api v1.4.0
+## explicit; go 1.18
+github.com/openkruise/kruise-api/apps/pub
+github.com/openkruise/kruise-api/apps/v1alpha1
+github.com/openkruise/kruise-api/apps/v1beta1
+github.com/openkruise/kruise-api/client/clientset/versioned
+github.com/openkruise/kruise-api/client/clientset/versioned/scheme
+github.com/openkruise/kruise-api/client/clientset/versioned/typed/apps/v1alpha1
+github.com/openkruise/kruise-api/client/clientset/versioned/typed/apps/v1beta1
+github.com/openkruise/kruise-api/client/clientset/versioned/typed/policy/v1alpha1
+github.com/openkruise/kruise-api/client/clientset/versioned/typed/rollouts/v1alpha1
+github.com/openkruise/kruise-api/policy/v1alpha1
+github.com/openkruise/kruise-api/rollouts/v1alpha1
+github.com/openkruise/kruise-api/utils/scheme
 # github.com/pelletier/go-toml/v2 v2.0.6
 ## explicit; go 1.16
 github.com/pelletier/go-toml/v2
@@ -160,15 +151,14 @@ github.com/pkg/errors
 # github.com/sirupsen/logrus v1.9.0
 ## explicit; go 1.13
 github.com/sirupsen/logrus
-# github.com/spf13/cast v1.5.0
-## explicit; go 1.18
-github.com/spf13/cast
 # github.com/spf13/pflag v1.0.5
 ## explicit; go 1.12
 github.com/spf13/pflag
 # github.com/ugorji/go/codec v1.2.7
 ## explicit; go 1.11
 github.com/ugorji/go/codec
+# go.uber.org/atomic v1.10.0
+## explicit; go 1.18
 # golang.org/x/crypto v0.5.0
 ## explicit; go 1.17
 golang.org/x/crypto/sha3
@@ -221,6 +211,8 @@ google.golang.org/appengine/internal/urlfetch
 google.golang.org/appengine/urlfetch
 # google.golang.org/genproto v0.0.0-20230124163310-31e0e69b6fc2
 ## explicit; go 1.19
+google.golang.org/genproto/googleapis/api
+google.golang.org/genproto/googleapis/api/annotations
 google.golang.org/genproto/googleapis/rpc/status
 # google.golang.org/grpc v1.52.3
 ## explicit; go 1.17
@@ -306,7 +298,9 @@ google.golang.org/protobuf/types/descriptorpb
 google.golang.org/protobuf/types/known/anypb
 google.golang.org/protobuf/types/known/durationpb
 google.golang.org/protobuf/types/known/emptypb
+google.golang.org/protobuf/types/known/structpb
 google.golang.org/protobuf/types/known/timestamppb
+google.golang.org/protobuf/types/known/wrapperspb
 # gopkg.in/inf.v0 v0.9.1
 ## explicit
 gopkg.in/inf.v0
@@ -316,6 +310,36 @@ gopkg.in/yaml.v2
 # gopkg.in/yaml.v3 v3.0.1
 ## explicit
 gopkg.in/yaml.v3
+# istio.io/api v0.0.0-20230217221049-9d422bf48675
+## explicit; go 1.18
+istio.io/api/analysis/v1alpha1
+istio.io/api/extensions/v1alpha1
+istio.io/api/meta/v1alpha1
+istio.io/api/networking/v1alpha3
+istio.io/api/networking/v1beta1
+istio.io/api/security/v1beta1
+istio.io/api/telemetry/v1alpha1
+istio.io/api/type/v1beta1
+# istio.io/client-go v1.17.1
+## explicit; go 1.18
+istio.io/client-go/pkg/apis/extensions/v1alpha1
+istio.io/client-go/pkg/apis/networking/v1alpha3
+istio.io/client-go/pkg/apis/networking/v1beta1
+istio.io/client-go/pkg/apis/security/v1beta1
+istio.io/client-go/pkg/apis/telemetry/v1alpha1
+istio.io/client-go/pkg/applyconfiguration/extensions/v1alpha1
+istio.io/client-go/pkg/applyconfiguration/meta/v1
+istio.io/client-go/pkg/applyconfiguration/networking/v1alpha3
+istio.io/client-go/pkg/applyconfiguration/networking/v1beta1
+istio.io/client-go/pkg/applyconfiguration/security/v1beta1
+istio.io/client-go/pkg/applyconfiguration/telemetry/v1alpha1
+istio.io/client-go/pkg/clientset/versioned
+istio.io/client-go/pkg/clientset/versioned/scheme
+istio.io/client-go/pkg/clientset/versioned/typed/extensions/v1alpha1
+istio.io/client-go/pkg/clientset/versioned/typed/networking/v1alpha3
+istio.io/client-go/pkg/clientset/versioned/typed/networking/v1beta1
+istio.io/client-go/pkg/clientset/versioned/typed/security/v1beta1
+istio.io/client-go/pkg/clientset/versioned/typed/telemetry/v1alpha1
 # k8s.io/api v0.26.1
 ## explicit; go 1.19
 k8s.io/api/admissionregistration/v1
@@ -632,7 +656,6 @@ k8s.io/client-go/pkg/version
 k8s.io/client-go/plugin/pkg/client/auth/exec
 k8s.io/client-go/rest
 k8s.io/client-go/rest/watch
-k8s.io/client-go/restmapper
 k8s.io/client-go/tools/auth
 k8s.io/client-go/tools/cache
 k8s.io/client-go/tools/clientcmd
@@ -681,7 +704,7 @@ k8s.io/utils/internal/third_party/forked/golang/net
 k8s.io/utils/net
 k8s.io/utils/strings/slices
 k8s.io/utils/trace
-# sigs.k8s.io/gateway-api v0.6.1
+# sigs.k8s.io/gateway-api v0.6.2
 ## explicit; go 1.18
 sigs.k8s.io/gateway-api/apis/v1alpha2
 sigs.k8s.io/gateway-api/apis/v1beta1

@@ -1,0 +1,7 @@
+# github.com/sirupsen/logrus v1.9.0
+## explicit
+github.com/sirupsen/logrus
+# golang.org/x/sys v0.0.0-20220715151400-c0bba94af5f8
+golang.org/x/sys/internal/unsafeheader
+golang.org/x/sys/unix
+golang.org/x/sys/windows
