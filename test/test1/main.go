@@ -11,6 +11,7 @@ import (
 func sayHello(w http.ResponseWriter, r *http.Request) {
 	url := os.Getenv("URL")
 	if url != "" {
+		r.Body
 		resp, err := http.Get(url)
 		if err != nil {
 			logrus.Errorf("Failed to request: %v\n", err)
@@ -24,8 +25,8 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 			logrus.Errorf("Failed to read response body: %v\n", err)
 			return
 		}
-
-		fmt.Fprintln(w, "第一个：", string(body), "第二个：", r)
+		bb, err := ioutil.ReadAll(r.Body)
+		fmt.Fprintln(w, "第一个：", string(body), "第二个：", string(bb))
 		return
 	}
 	fmt.Fprintln(w, r)
