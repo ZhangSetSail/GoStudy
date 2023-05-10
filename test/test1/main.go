@@ -11,14 +11,18 @@ import (
 func sayHello(w http.ResponseWriter, r *http.Request) {
 	url := os.Getenv("URL")
 	if url != "" {
-		resp, err := http.Get(url)
+		req, err := http.NewRequest("GET", url, nil)
 		if err != nil {
 			logrus.Errorf("Failed to request: %v\n", err)
 			return
 		}
-
-		defer resp.Body.Close()
-
+		req.Header.Set("X-Request-Id", r.Header["X-Request-Id"][0])
+		resp, err := (&http.Client{}).Do(req)
+		//resp, err := http.Get(serviceUrl + "/topic/query/false/lsj")
+		if err != nil {
+			logrus.Errorf("query topic failed: %v", err)
+			return
+		}
 		body, err := ioutil.ReadAll(resp.Body)
 		if err != nil {
 			logrus.Errorf("Failed to read response body: %v\n", err)
