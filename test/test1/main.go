@@ -17,7 +17,6 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 		req.Header.Set("X-Request-Id", r.Header["X-Request-Id"][0])
-		req.Header.Set("name", "zqh")
 		resp, err := (&http.Client{}).Do(req)
 		//resp, err := http.Get(serviceUrl + "/topic/query/false/lsj")
 		if err != nil {
