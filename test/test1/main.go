@@ -3,21 +3,21 @@ package main
 import (
 	"fmt"
 	"github.com/sirupsen/logrus"
-	"io/ioutil"
 	"net/http"
 	"os"
 )
 
 func sayHello(w http.ResponseWriter, r *http.Request) {
 	url := os.Getenv("URL")
-	response, err := http.Get(url)
-	if err != nil {
-		panic(err)
+	if url != "" {
+		resp, err := http.Get(url)
+		if err != nil {
+			fmt.Printf("Failed to request: %v\n", err)
+			return
+		}
+		logrus.Infof("header:%v", resp.Header)
 	}
-	defer response.Body.Close()
-	body, err := ioutil.ReadAll(response.Body)
-	logrus.Infof("看看数据%v", string(body))
-	fmt.Fprintln(w, "V2:", r)
+	fmt.Fprintln(w, r)
 }
 
 func main() {
