@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/sirupsen/logrus"
 	"io/ioutil"
 	"net/http"
 	"os"
@@ -12,7 +13,7 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 	if url != "" {
 		resp, err := http.Get(url)
 		if err != nil {
-			fmt.Printf("Failed to request: %v\n", err)
+			logrus.Errorf("Failed to request: %v\n", err)
 			return
 		}
 
@@ -20,11 +21,12 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 
 		body, err := ioutil.ReadAll(resp.Body)
 		if err != nil {
-			fmt.Printf("Failed to read response body: %v\n", err)
+			logrus.Errorf("Failed to read response body: %v\n", err)
 			return
 		}
 
 		fmt.Fprintln(w, string(body), r)
+		return
 	}
 	fmt.Fprintln(w, r)
 }
